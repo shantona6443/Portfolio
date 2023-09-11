@@ -1,0 +1,1015 @@
+/*=================================================
+||				Useful Links
+==================================================*/
+/*
+|||||||||	Slider	|||||||||
+|	http://www.jssor.com/demos/image-gallery.html
+|	http://www.jssor.com/development/index.html
+|	http://www.jssor.com/development/define-slides-html-code.html
+|	file:///G:/Technext/Helper/Jssor.Slider.FullPack/demos-no-jquery/introduction-slider.source.html
+|	file:///G:/Technext/Helper/Jssor.Slider.FullPack/demos-no-jquery/image-gallery.source.html
+|	http://www.owlcarousel.owlgraphic.com/docs/started-welcome.html
+|||||||||	Others	|||||||||
+|	Fonts: 1. Roboto[Section-title] 2. Open-Sans[body]
+|
+|
+*/
+
+/*=================================================
+||				Index 
+==================================================*/
+/*
+|	1. Imports
+|	2. Global
+|	3. Colors
+|
+|	=============
+|	SECTIONS
+|	=============
+|	4. Navigation
+|	5. Header
+|	6. About us
+|	7. Affordable pricing
+|	8. Great Place to enjoy
+|	9. Our Beer
+|	10. Our Breakfast Menu
+|	11. Our Bread
+|	12. Catagories-1
+|	13. Our Featured Dishes Menu
+|	14. Catagories-2
+|	15. Reserve A Table!
+|	16. Contact With us
+|	17. Footer
+*/
+
+
+/*=================================================
+||				1. Imports 
+==================================================*/
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,400);
+@import url(http://fonts.googleapis.com/css?family=Raleway:100,400,700);
+/*=================================================
+||				2. Global 
+==================================================*/
+body
+{
+	font-family: 'Raleway', 'Open-Sans', sans-serif;
+	overflow-x: hidden;
+	font-size: 14px;
+}
+
+
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+  outline: none; 
+}
+
+.btn {
+  border-radius: 0; 
+  letter-spacing: 2px; 
+}
+
+.btn:hover {
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+}
+
+.btn-middle {
+	background-color: transparent;
+	padding: 15px 30px;
+	border: 1px solid #8bc34a;
+	color: #5c9233;
+	margin: 25px 0px;
+}
+
+.btn-middle:hover {
+	background-color: #8bc34a;
+	color: #fff;
+	box-shadow: 0px 2px 5px #948E8E;
+}
+
+.btn-send,
+.btn-reservation {
+	background-color: #8bc34a;
+	padding: 10px 50px;
+	box-shadow: 0px 2px 5px #948E8E;
+	color: #fff;
+	margin: 20px 0px;
+}
+
+.btn-send:hover,
+.btn-reservation:hover {
+	background-color: #5c9233;
+	color: #eee;
+
+}
+
+.btn-reservation {
+	width: 100%;
+	margin: 0px;
+}
+
+.section-title
+{
+	/*padding: 310px 0px;
+	margin: 0px 130px 0px 250px;*/
+	padding: 20%;
+	text-align: right;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	font-size: 60px;
+	color: #fff;
+}
+.section-content-title
+{
+	font-family: 'Roboto';
+	font-weight: 100;
+	font-size: 60px;
+}
+.section-content-para
+{
+	margin: 30px 0px;
+}
+.section-content
+{
+	padding: 15% 25% 15% 20%;
+}
+/*.custom-row
+{
+	width: 100vw;
+}*/
+.dis-table
+{
+	display: table;
+	/*width: 100vw;*/
+}
+.dis-table .dis-table-cell
+{
+	display: table-cell;
+	padding: 0;
+	float: none;
+	/*width: 50vw;*/
+	/*position: relative;*/
+}
+.color-bg
+{
+	background: #8bc34a;
+}
+.section-bg
+{
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-position: center;
+}
+
+.form-control {
+	border-radius: 0px;
+	margin-bottom: 25px;
+}
+
+input.empty, textarea.empty {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+
+.section-icon
+{
+	position: absolute;
+	left: 47%;
+	margin-left: -21px;
+	margin-top: 58px;
+	z-index: 999;
+}
+/*.wrapper
+{
+	margin-top: 50px;
+}*/
+/*=================================================
+||				3. Colors 
+==================================================*/
+/*=================================================
+||				4. Navigation 
+==================================================*/
+.custom-navbar-default
+{
+	background-color: #8bc34a;
+	border: 0px;
+	margin: 0px;
+	border-radius: 0px;
+	color: #5c9233;
+	padding: 50px 0px;
+	box-shadow: 0px 2px 7px #000; /*rgb(139, 195, 74)*/
+}
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover
+{
+	color: #5c9233;
+}
+.navbar-default .navbar-nav>li>a
+{
+	color: #5c9233;
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	margin: 0px 18px;
+	padding: 18px 0px;
+	font-size: 14px;
+	text-align: center;
+
+}
+.navbar-default .logo img{
+	height: 50px;
+	width: 50px;
+	cursor: pointer;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover
+{
+	color: #fff;
+}
+.navbar-default .navbar-toggle
+{
+	border-color: #fff;
+}
+.navbar-toggle
+{
+	color: #fff;
+	border-radius: 0px;
+}
+.navbar-default .navbar-toggle .icon-bar
+{
+	background-color: #fff;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover
+{
+	background-color: transparent;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background-color: transparent;
+	color: #fff;
+}
+
+.navbar-brand {
+	margin-top: -25px;
+  	width: 205px;
+}
+
+.navbar-default .navbar-collapse {
+	border-color: #669D38;
+	background-color: #8BC34A;
+}
+
+
+/*============================================
+			Popular-Food part Start
+===============================================*/
+
+	#Popular-Food{
+		text-align: center;
+		margin-top: 140px;
+
+	}
+
+	#Popular-Food .title .img{
+		margin-bottom: 10px;
+	}
+	#Popular-Food h2{
+		color: #444444;
+		font-family: 'Alegreya Sans', sans-serif;
+		font-size:50px ;
+		font-weight: 400;
+		line-height: 42px;
+		margin-bottom: 15px;
+	}
+	#Popular-Food p{
+		color: #444444;
+		font-family: 'Open Sans', sans-serif;
+		font-size:16px;
+		font-weight: 400;
+		line-height:24px;
+		margin-bottom: 15px;
+		
+	}
+	#Popular-Food .food{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+	#Popular-Food .food .food-menu{
+		width: 26%;
+		margin-top: 90px;
+		box-shadow: 0px 7px 13px 1px rgba(120,124,124,0.20);
+		-webkit-box-shadow: 0px 7px 13px 1px rgba(120,124,124,0.20);
+		-moz-box-shadow: 0px 7px 13px 1px rgba(120,124,124,0.20);
+		transition: .5s;
+
+	}
+	#Popular-Food .food .food-menu:hover{
+		transform: translateY(-8%);
+	}
+	#Popular-Food .food .food-menu {
+		position: relative;
+	}
+	#Popular-Food .food .food-menu .food_prize{
+		height: 80px;
+		width: 80px;
+		border-radius: 50%;
+		background: #60ba62;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translate(-50%,-50%);
+		transition: .4s;
+	}
+	#Popular-Food .food .food-menu .food-types p a{
+		color:#444444;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 20px;
+		font-weight: 400;
+		transition: .4s;
+	}
+	#Popular-Food .food .food-menu .food-types p a:hover{
+		color:#d50c0d;
+	}
+	#Popular-Food .food .food-menu .food-types ul i{
+		color: #fde101;
+		font-size: 16px;
+	}
+	#Popular-Food .food .food-menu .food-types p{
+		color: #797979;
+		margin-top: 4px;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+	}
+	#Popular-Food .food .bottom-part{
+		height: 70px;
+		width: 100%;
+		border-top: 1px solid #f2f2f2;	
+	}
+	#Popular-Food .food .food-menu .bottom-part{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 20px;
+		box-sizing: border-box;
+	}
+	#Popular-Food .food .food-menu .bottom-part .btn a:hover{
+	background: transparent none repeat scroll 0 0;
+    border: 1px solid #f2f2f2;
+    color: #959595;
+    
+	}
+	#Popular-Food .food .food-menu .bottom-part .btn a{
+	background: #d50c0d none repeat scroll 0 0;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-family: "Alegreya", serif;
+    font-size: 18px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 22px;
+    text-transform: capitalize;
+    position: relative;
+    transform: translateZ(0px);
+    transition-duration: 0.5s;
+    
+}
+
+	}
+	#Popular-Food .food .food-menu .bottom-part .icon{
+		padding-right: 20px;
+	}
+	#Popular-Food .food .food-menu .bottom-part .icon i{
+		padding-left: 10px;
+		color: #959595;
+		padding: 5px;
+	}
+	#Popular-Food .food .food-menu .bottom-part .icon a{
+		
+	}
+	#Popular-Food .food .food-menu:hover .food_prize{
+		background: #d50c0d;
+
+	}
+	#Popular-Food .food .food-menu .food_prize p{
+		line-height: 80px;
+		text-align: center;
+		color: #ffffff;
+	}
+	#Popular-Food .food .food-menu .food-item img{
+		width: 100%;
+	}
+	#Popular-Food .food .food-menu .food-item-2 img{
+		margin-top: 20px;
+	}
+	
+/*============================================
+			Popular-Food part End
+===============================================*/
+
+/*============================================
+			Blog part End
+===============================================*/
+#blog-part{
+		text-align: center;
+		margin-top: 140px;	
+	}
+
+	#blog-part .title .img{
+		margin-bottom: 10px;
+	}
+	#blog-part h2{
+		color: #444444;
+		font-family: 'Alegreya Sans', sans-serif;
+		font-size:50px ;
+		font-weight: 400;
+		line-height: 42px;
+		margin-bottom: 15px;
+	}
+	#blog-part p{
+		color: #444444;
+		font-family: 'Open Sans', sans-serif;
+		font-size:16px;
+		font-weight: 400;
+		line-height:24px;
+		margin-bottom: 15px;
+		
+	}
+	#blog-part .food{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+	#blog-part .food .food-menu{
+		width: 30%;
+		margin-top:30px;
+		box-shadow: 0 0 10px rgb(96 186 98 / 10%)inset,0 0 0 #000000;
+		transition: .8s;
+		margin-right: 10px;
+		
+	}
+	/*#blog-part .food .food-menu:hover .food-item img{
+		transform: scale(1.10, 1.10);
+	}*/
+	#blog-part .food .food-menu .food-item img{
+		width: 100%;
+
+	}
+	#blog-part .food .food-menu .food-item img{
+		opacity: .5;
+		transition: .5s;
+	}
+	#blog-part .food .food-menu .food-item:hover img{
+		transform: scale(1.1);
+	}
+	#blog-part .food .food-menu:hover .food-item img{
+		opacity: 70;
+	}
+	#blog-part .food .blog-details{
+		padding: 20px 0px;
+		box-sizing: border-box;
+	}
+	#blog-part .food .food-menu .blog-details h3{
+		font-family: 'Alegreya Sans', sans-serif;
+		font-size: 26px;
+		color: #444444;
+		font-weight: 700;
+		margin-top: 10px;
+	}
+	#blog-part .food .food-menu .blog-details .date p{
+		font-family: 'Alegreya Sans', sans-serif;
+		font-size: 16px;
+		color: #959595;
+		font-weight: 300;
+		margin-bottom: 10px;
+	}
+	#blog-part .food .food-menu .blog-details p{
+		font-family: 'Alegreya Sans', sans-serif;
+		font-size: 14px;
+		color: black;
+		font-weight: 300;
+		margin-top: 10px;
+		width: 280px;
+		margin-bottom: 30px;
+		margin-top: 9px;
+	}
+	#blog-part .food .food-menu .blog-details a{
+		padding: 10px 14px;
+		color: blue;
+		background: #60ba62;
+		border-radius: 5px;
+		color: #ffffff;	
+	}
+
+	
+
+/*============================================
+			Blog part End
+===============================================*/
+
+/*-----------------------------------------------
+		navbar shrinking
+-----------------------------------------------*/
+
+nav.navbar.shrink {
+	max-height: 62px;
+  	padding: 12px 0px;
+  	transition: all 0.3s ease-in-out;
+  	-webkit-transition: all 0.3s ease-in-out;
+  	-moz-transition: all 0.3s ease-in-out;
+  	-ms-transition: all 0.3s ease-in-out;
+  	-o-transition: all 0.3s ease-in-out;
+}
+
+nav.shrink a {
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	font-size: 15px;
+}
+
+nav.shrink .navbar-brand {
+	margin-top: -19px;
+}
+
+nav.shrink .navbar-toggle {
+	padding: 4px 5px;
+	margin: 8px 15px 8px 0;
+}
+
+.navbar-default.shrink .navbar-collapse {
+    border-color: transparent;
+}
+
+/*=================================================
+||				5. Header
+==================================================*/
+.owl-carousel
+{
+	margin-top: 156px;
+}
+.header-content
+{
+	margin-top: 30vh;
+	display: inline-block;
+}
+.header-title, .header-sub-title
+{
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	color: #333;
+}
+.header-title
+{
+	font-size: 112px;
+	font-weight: 100;
+	margin-bottom: 0px;
+	line-height: 1;
+}
+.header-sub-title
+{
+	font-size: 16px;
+	margin-left: 10px;
+}
+.owl-carousel .owl-wrapper, .owl-carousel .owl-item .item
+{
+	height: 80vh;
+	background-repeat: no-repeat;
+}
+.owl-carousel .owl-wrapper, .owl-carousel .owl-item:nth-child(1) .item
+{
+	background: url('../images/1.jpg');
+	background-size: cover;
+	background-position: bottom;
+}
+.owl-carousel .owl-wrapper, .owl-carousel .owl-item:nth-child(2) .item
+{
+	background: url('../images/2.jpg');
+	background-size: cover;
+}
+.owl-carousel .owl-wrapper, .owl-carousel .owl-item:nth-child(3) .item
+{
+	background: url('../images/3.jpg');
+	background-size: cover;
+}
+.owl-theme .owl-controls .owl-buttons div
+{
+	position: absolute;
+	bottom: -25px;
+	color: #000;
+	padding: 15px;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	font-size: 15px;
+	opacity: 1;
+	margin: 0px;
+	transition: all .4s;
+	background: #8bc34a;
+	color: #fff;
+}
+.owl-theme .owl-controls .owl-buttons div:hover
+{
+	color: #000;
+	background: #fff;
+}
+.owl-prev
+{
+	right: 25%;
+}
+.owl-next
+{
+	right: 21%;
+}
+/*=================================================
+||				6. About us
+==================================================*/
+.about-bg
+{
+	background: url('../images/About-C-bg.jpg');
+	background-repeat: no-repeat;
+	background-size: 85%;
+  	background-position-x: 15%;
+  	background-position-y: 80%;
+}
+#about 
+{
+	margin-top: -10px;
+}
+/*=================================================
+||				7. Affordable pricing
+==================================================*/
+/*=================================================
+||				8. Great Place to enjoy
+==================================================*/
+.great-place-to-enjoy .section-bg
+{
+	background-image: url('../images/GPtE-bg.jpg');
+}
+/*=================================================
+||				9. Our Beer
+==================================================*/
+.beer .section-bg
+{
+	/*background: url('../images/beer-bg1.png'), url('../images/beer-bg2.png');
+	background-position-x: 58%, 80%;
+	background-position-y: 50%, 50%;
+	background-repeat: no-repeat, no-repeat;
+	background-size: 300px,240px;*/
+
+    background: url("../images/beer-bg1.png"), url("../images/beer-bg2.png");
+    background-repeat: no-repeat, no-repeat;
+	
+    background-position: 51% 58%, 75% 58%;
+	
+    background-size: 300px 300px, 240px 240px;
+}
+/*=================================================
+||				10. Our Breakfast Menu
+==================================================*/
+.breakfast .section-bg
+{
+	background-image: url('../images/OBM-bg.jpg');
+}
+/*=================================================
+||				11. Our Bread
+==================================================*/
+
+.bread .section-bg 
+{
+	/*background: url('../images/bread-bg1.png'), url('../images/bread-bg2.png');
+	background-position-x: 58%, 80%;
+	background-position-y: 50%, 50%;
+	background-repeat: no-repeat, no-repeat;
+	background-size: 300px,240px;*/
+
+	background: url("../images/bread-bg1.png"), url("../images/bread-bg2.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 51% 58%, 75% 58%;
+    background-size: 300px 300px, 240px 240px;
+}
+/*=================================================
+||				12. menu
+==================================================*/
+.menu 
+{
+    padding: 50px 0px;
+}
+
+.menu-catagory h2 
+{
+    font-size: 51px;
+    font-weight: 100;
+    margin-bottom: 27px;
+}
+
+.menu-system {
+    width: 100%;
+    color: #8bc34a;
+}
+
+.half 
+{
+    width: 50%;
+    position: relative;
+}
+
+.per-head
+{
+    float: left;
+}
+
+.per-head span {
+    margin-right: 5px;
+}
+
+.price {
+	float: right;
+	margin-bottom: 18px;
+}
+
+
+
+/*=================================================
+||				13. Our Featured Dishes Menu
+==================================================*/
+.featured-dish .section-bg
+{
+	background-image: url('../images/OFDM-bg.jpg');
+}
+/*=================================================
+||				14. Have a look to our dishes
+==================================================*/
+
+
+/*=================================================
+||				15. Reserve A Table!
+==================================================*/
+.reserve .section-bg
+{
+	background-image: url('../images/RaT-bg.jpg');
+}
+
+.reservation .section-content
+{
+	padding: 15% 15% 10% 15%;
+}
+
+.reservation-form 
+{
+	margin-top: -20px;
+}
+
+.opening-time 
+{
+	background-color: rgb(139, 195, 74);
+	color: #fff;
+	margin-top: -50px;
+	padding: 20px 40px;
+	border-radius: 4px;
+}
+
+.opening-time-title 
+{
+	margin-top: 0px;
+	margin-bottom: 25px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.opening-time p 
+{
+    margin-bottom: 2px;
+}
+
+.opening-time h4 
+{
+    margin-bottom: 6px;
+    margin-top: 12px;
+    font-weight: 600;
+}
+/*=================================================
+||				16. Contact With us
+==================================================*/
+
+.contact .section-content
+{
+	color: #fff;
+}
+.contact .section-title 
+{
+	padding: 10% 20%;
+}
+.social-media
+{
+	position: absolute;
+	width: 100%;
+	left: 5%;
+	margin-top: -58px;
+	z-index: 999;
+}
+
+.social-media li
+{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.fb, .twit, .g-plus, .link
+{
+	float: left;
+	height: 126px;
+	width: 126px;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+		-mz-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		 -o-transition: all 0.3s ease-in-out;
+}
+
+.fb
+{
+	background: url(../images/social/facebook_color.png);
+}
+
+.fb:hover
+{
+	background: url(../images/social/facebook_black.png);
+}
+
+.twit {
+	background: url(../images/social/twitter_color.png);
+}
+
+.twit:hover {
+	background: url(../images/social/twitter_black.png);
+}
+
+.g-plus {
+	background: url(../images/social/g-plus_color.png);
+}
+
+.g-plus:hover {
+	background: url(../images/social/g-plus_black.png);
+}
+
+.link {
+	background: url(../images/social/linkedin_color.png);
+}
+
+.link:hover {
+	background: url(../images/social/linkedin_black.png);
+}
+
+#map-canvas {
+    width: 100%;
+    height: 350px;
+}
+
+.contact-form
+{
+	padding: 50px 0px;
+}
+/*============================================
+			brand part start
+===============================================*/
+	#brand-part{
+		margin-bottom: 300px;
+		margin-top: 200px;
+
+
+	}
+	#brand-part .brand-item{
+		display: flex;
+		justify-content:space-evenly;	
+		align-items: center;
+
+
+	}
+	#brand-part .brand-item .item{
+		width: 18%;
+		justify-content: center;
+		display: flex;
+		align-items: center;
+
+
+	}
+	
+	
+/*============================================
+			brand part End
+===============================================*/
+/*============================================
+			footer part End
+===============================================*/
+footer .main{
+	height: 200px;
+	width: 100%;
+	background: #212529;
+	position: relative;
+}
+footer .main .inner-part{
+	width: 95%;
+	background: #212529;
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+	transform: translatex(50%);
+	padding: 75px 10px 30px;
+	box-sizing: border-box;
+}
+footer .main .inner-part h1{
+	text-align: center;
+	color: #ffffff;
+	line-height: 60px;
+	font-family: 'Open Sans', sans-serif;
+	font-size:24px;
+	font-weight: 700;
+	margin-bottom: 16px;
+}
+footer .main .inner-part form input{
+	width: 520px;
+	padding: 14px 14px;
+	border: teal;
+	border: none;
+	border-radius: 5px;
+	margin-left: 120px;
+}
+footer .main .inner-part .food-deaitls .item .icon{
+	margin-right: 20px;
+	font-size: 24px;
+	margin-top: 5px;
+}
+footer .main .inner-part .food-deaitls .item .text{
+	margin-right: 40px;
+	transition: .4s;
+
+}
+footer .main .inner-part .food-deaitls .item .text p{
+	font-family: 'Open Sans', sans-serif;
+	font-size:14px;
+	font-weight: 400;
+	line-height: 24px;
+	
+}
+footer .main .inner-part .food-deaitls .item .text:hover{
+	color: #d50c0d;
+}
+footer .main .inner-part .food-deaitls .item{
+	display: flex;
+	color: #ffffff;
+}
+footer .main .inner-part .food-deaitls .item {
+	margin-top: 40px;
+}
+footer .main .inner-part form a{
+	padding: 13px 30px;
+	background: #d50c0d;
+	border-radius: 5px;
+	transition: .4s;
+	color: #ffffff;
+	cursor: pointer;
+	margin-left: 10px;
+}
+footer .main .inner-part form a:hover{
+	background: #222;
+
+}
+footer .main .inner-part .food-deaitls{
+	display: flex;
+	justify-content: center;
+	font-size: 13px;
+}
+
+/*============================================
+			footer part End
+===============================================*/
+/*============================================
+			copy-right part start
+===============================================*/
+#copy-right-part{
+	background:#ededed;
+}
+#copy-right-part .item{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 20px;
+	
+}
+
+/*============================================
+			copy-right part End
+===============================================*/
